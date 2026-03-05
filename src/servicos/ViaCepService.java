@@ -14,7 +14,7 @@ public class ViaCepService {
         return URL_BASE + cep + "/json/";
     }
 
-    public HttpResponse<String> buscarEndereco(String cep) throws IOException, InterruptedException{
+    private HttpResponse<String> buscarEnderecoAPI(String cep) throws IOException, InterruptedException{
         String url = formatarURL(cep);
         
         HttpClient client = HttpClient.newHttpClient();
@@ -23,8 +23,8 @@ public class ViaCepService {
         return response;
     }
 
-    public String buscarEnderecoFormatado(String cep) throws IOException, InterruptedException{
-        HttpResponse<String> response = buscarEndereco(cep);
+    public String buscarEndereco(String cep) throws IOException, InterruptedException{
+        HttpResponse<String> response = buscarEnderecoAPI(cep);
         return response.body();
     }
 }
