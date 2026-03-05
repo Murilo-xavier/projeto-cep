@@ -28,8 +28,8 @@ public class ViaCepService {
         return null;
     }
 
-    public String buscarEndereco(String cep){
-        try{
+    public String buscarEndereco(String cep) {
+        try {
             HttpResponse<String> response = buscarEnderecoAPI(cep);
             return response.body();
         } catch (Exception e) {

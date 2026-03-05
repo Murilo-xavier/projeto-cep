@@ -9,6 +9,7 @@ public class InteracaoUsuario {
     private static boolean validarCep(String cep) {
         return cep.matches("\\d{8}");
     }
+
     public static void solicitarCep() {
         String resposta;
         System.out.println("Digite o CEP que deseja consultar:");
