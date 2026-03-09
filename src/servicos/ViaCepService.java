@@ -10,16 +10,16 @@ public class ViaCepService {
 
     private String URL_BASE = "https://viacep.com.br/ws/";
 
-    private String formatarURL(String cep) {
-        return URL_BASE + cep + "/json/";
+    private URI formatarURL(String cep) {
+        return URI.create(URL_BASE + cep + "/json/");
     }
 
     private HttpResponse<String> buscarEnderecoAPI(String cep) {
-        String url = formatarURL(cep);
+        URI url = formatarURL(cep);
 
         try {
             HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
+            HttpRequest request = HttpRequest.newBuilder().uri(url).build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             return response;
         } catch (IOException | InterruptedException e) {
