@@ -6,6 +6,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+import com.google.gson.Gson;
+
+import modelo.Endereco;
+
 public class ViaCepService {
 
     private String URL_BASE = "https://viacep.com.br/ws/";
@@ -28,10 +32,10 @@ public class ViaCepService {
         return null;
     }
 
-    public String buscarEndereco(String cep) {
+    public Endereco buscarEndereco(String cep) {
         try {
             HttpResponse<String> response = buscarEnderecoAPI(cep);
-            return response.body();
+            return new Gson().fromJson(response.body(), Endereco.class) ;
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }
