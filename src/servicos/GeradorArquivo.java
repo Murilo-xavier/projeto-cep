@@ -4,8 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-
-
 public class GeradorArquivo {
 
     public static void gerarArquivo(String nomeArquivo, List<String> conteudo) {

@@ -30,13 +30,4 @@ public class ViaCepService {
             }
            
     }
-
-    // public Endereco buscarEndereco(String cep) {
-    //     try {
-    //         HttpResponse<String> response = buscarEnderecoAPI(cep);
-    //         return new Gson().fromJson(response.body(), Endereco.class) ;
-    //     } catch (Exception e) {
-    //         throw new RuntimeException("Erro ao buscar o endereço: " + e.getMessage());
-    //     }
-    // }
 }
