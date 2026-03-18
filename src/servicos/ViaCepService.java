@@ -17,17 +17,17 @@ public class ViaCepService {
         return URI.create(URL_BASE + cep + "/json/");
     }
 
-    public Endereco buscarEndereco(String cep){
+    public Endereco buscarEndereco(String cep) {
         URI url = formatarURL(cep);
 
-            HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder().uri(url).build();
-            try {
-                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-                 return new Gson().fromJson(response.body(), Endereco.class) ;
-            } catch (Exception e) {
-                throw new RuntimeException("Erro ao buscar o endereço: " + e.getMessage());
-            }
-           
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder().uri(url).build();
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            return new Gson().fromJson(response.body(), Endereco.class);
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao buscar o endereço: " + e.getMessage());
+        }
+
     }
 }
