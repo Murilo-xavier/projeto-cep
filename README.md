@@ -42,34 +42,70 @@ Resposta JSON
         ↓
 Conversão para Objeto Java
         ↓
-Geração de Arquivo (.txt / .json)  
+Geração de Arquivo (.txt / .json) 
+```
 
 ## 🗂️ Estrutura do Projeto
 
-📁 src
- ├── 📁 modelo
- │    └── Endereco.java
- │
- ├── 📁 principal
- │    └── Testes.java
- │
- ├── 📁 servicos
- │    ├── Conversor.java
- │    ├── GeradorArquivo.java
- │    ├── InteracaoUsuario.java
- │    └── ViaCEPService.java
- │
-📁 lib
- └── gson.jar
+📁 src  
+ ├── 📁 modelo  
+ │    └── Endereco.java  
+ │  
+ ├── 📁 principal  
+ │    └── Testes.java  
+ │  
+ ├── 📁 servicos  
+ │    ├── Conversor.java  
+ │    ├── GeradorArquivo.java  
+ │    ├── InteracaoUsuario.java  
+ │    └── ViaCEPService.java  
+ │  
+📁 lib  
+ └── gson.jar  
 
- ## ⚙️ Como Funciona
+---
+
+## ⚙️ Como Funciona
 
 - InteracaoUsuario → Recebe e valida o CEP
-
 - ViaCEPService → Faz a requisição HTTP
-
 - Conversor → Converte JSON para objeto Java
-
 - GeradorArquivo → Salva os dados em arquivo
-
 - Endereco → Representa os dados da API
+
+--- 
+
+ ## 📚 O que eu aprendi
+
+✔️ Como consumir APIs REST em Java  
+✔️ Uso de HttpRequest e HttpResponse  
+✔️ Conversão JSON ↔ Objeto com Gson  
+✔️ Separação de responsabilidades (boas práticas)  
+✔️ Organização de projetos em camadas  
+
+---
+
+## 🔮 Melhorias Futuras
+
+🎨 Interface gráfica (JavaFX/Swing)  
+🧪 Testes automatizados  
+⚠️ Tratamento de erros mais robusto  
+💾 Cache de consultas  
+🌍 Suporte a múltiplas APIs  
+
+---
+
+## 👨‍💻 Autor
+
+Murilo Xavier  
+Estudante de Ciência da Computação  
+Universidade Estadual Da Paraíba - UEPB
+
+Projeto desenvolvido com finalidade de praticar o consumo de API's externas e HttpRequest.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/murilo-xavier-530a13307/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/murilo_xavierr/)
+[![Gmail](https://img.shields.io/badge/Gmail-muriloxmacedo%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:muriloxmacedo@gmail.com)
+ 
+
+📅 2026
